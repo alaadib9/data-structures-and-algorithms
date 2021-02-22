@@ -8,8 +8,9 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
- let regexString = string.replace(/\d+/g, 'zero');
-console.log(regexString)
+ let regexString = string.replace(/0/g, 'zero');
+
+return regexString
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,9 +23,9 @@ const addOne = (arr) => {
   // Solution code here...
 let stringArr = arr.map ( function (value , index  ){
   return (value + 1);
-  console.log(stringArr)
 })
-}
+return stringArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -34,9 +35,10 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
-  arr.map((val => {
-return val + '?'
-  }));
+  let arrNum = arr.map ( function (val, idex  ){
+    return (val + '?');
+  })
+  return arrNum;
 }
 
 /* ------------------------------------------------------------------------------------------------
