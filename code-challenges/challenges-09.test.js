@@ -20,7 +20,9 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-  Object.entries(obj)
+  var arrayList = Object.keys(obj).map((key) => 
+  '<li>'+key+": "+ obj[key]+'</li>');
+  return arrayList;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,9 +35,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 const addValues = (arr) => {
   // Solution code here...
   const numArr = arr.reduce( (accumulator, val) => {
-    accumulator+val
-    return numArr;
-  }, '');
+    return  accumulator+val
+    
+  }, 0);
+  return numArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +55,11 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+  let reduceAmount = arr.reduce((tot , element )=>{
+    tot = tot + element.purchasePrice;
+    return tot;
+  },0);
+  return reduceAmount;
 
 };
 
@@ -131,9 +139,11 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  return arr.reduce((acc , val)=>{
+ let charactersName = arr.reduce((acc , val)=>{
     acc.push(val.name)
+    return acc;
   },[]);
+  return charactersName;
 };
 
 /* ------------------------------------------------------------------------------------------------
