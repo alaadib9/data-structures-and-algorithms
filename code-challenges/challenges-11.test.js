@@ -13,6 +13,13 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
+  let fullNameArr = people.map(person => {
+    let finalArr = [];
+    tempArr.push(person.firstName, person.lastName)
+    return finalArr.join(' ');
+  })
+  return fullNameArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
