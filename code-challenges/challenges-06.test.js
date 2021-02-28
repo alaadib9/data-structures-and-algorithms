@@ -119,9 +119,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-  newArray =[];
+  var newArray =[];
   for(let i = 0 ; i< Object.keys(obj).length ; i++){
-    arr.push(Object.keys(obj)[i] + ': ' +Object.values(obj)[i] );
+    newArray.push(Object.keys(obj)[i] + ': ' +Object.values(obj)[i] );
    }
    return newArray;
   
