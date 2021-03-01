@@ -15,11 +15,10 @@ const toLastNames = people => {
   // Solution code here...
   let fullNameArr = people.map(person => {
     let finalArr = [];
-    tempArr.push(person.firstName, person.lastName)
+    finalArr.push(person.firstName, person.lastName)
     return finalArr.join(' ');
   })
   return fullNameArr;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,6 +57,9 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  var regular = new RegExp( /[a-zA-Z][0-9]/g);
+
+  return  regular.test(string)
 };
 
 /* ------------------------------------------------------------------------------------------------
